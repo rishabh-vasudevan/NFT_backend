@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-un-&g&8j5nu+37-g%9$4_4kitrp^ti)de&m86goa0f&dyh1--z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = ['https://mint-nft-backend.herokuapp.com']
+
 ALLOWED_HOSTS = ["*"]
 
 
