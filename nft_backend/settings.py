@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'corsheaders',
@@ -44,10 +46,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -57,7 +59,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'nft_backend.urls'
 
-CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {
